@@ -8,7 +8,7 @@
 pkgname=gcc48
 _pkgver_minor=4.8
 pkgver=${_pkgver_minor}.2
-pkgrel=3
+pkgrel=4
 pkgdesc="The GNU Compiler Collection - C and C++ frontends (4.8.x)"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL' 'FDL' 'custom')
@@ -116,7 +116,7 @@ package()
 
   # create symlinks
   cd ${pkgdir}/usr/bin
-  for ii in c++ cpp g++ gcc gcc-ar gcc-nm gcc-ranlib; do
+  for ii in c++ cpp g++ gcc gcc-ar gcc-nm gcc-ranlib gfortran; do
     ln -s ${ii}-${pkgver} ${ii}-${_pkgver_minor}
     ln -s ${CHOST}-${ii}-${pkgver} ${CHOST}-${ii}-${_pkgver_minor}
   done
