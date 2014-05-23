@@ -8,7 +8,7 @@
 pkgname=gcc46
 _ver=4.6
 pkgver=4.6.4
-pkgrel=2
+pkgrel=3
 pkgdesc="The GNU Compiler Collection (4.6.x)"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL' 'custom')
@@ -55,6 +55,12 @@ build() {
   # Doesn't like FORTIFY_SOURCE
   CPPFLAGS=${CPPFLAGS//-D_FORTIFY_SOURCE=?/}
   export CPPFLAGS
+
+  # Doesn't like -fstack-protector-strong
+  CFLAGS=${CFLAGS//-fstack-protector-strong/-fstack-protector}
+  export CFLAGS
+  CXXFLAGS=${CXXFLAGS//-fstack-protector-strong/-fstack-protector}
+  export CXXFLAGS
 
   echo ${pkgver} > gcc/BASE-VER
 
