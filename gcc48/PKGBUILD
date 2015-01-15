@@ -46,9 +46,6 @@ build() {
   # http://gcc.gnu.org/bugzilla/show_bug.cgi?id=57653
   patch -p0 -i ${srcdir}/gcc-4.8-filename-output.patch
   
-  # http://gcc.gnu.org/bugzilla//show_bug.cgi?id=56710 - commit 3d1f8279
-  patch -p1 -i ${srcdir}/gcc-4.8-lambda-ICE.patch
-
   # installing libiberty headers is broken
   # http://gcc.gnu.org/bugzilla/show_bug.cgi?id=56780#c6
   sed -i 's#@target_header_dir@#libiberty#' libiberty/Makefile.in
