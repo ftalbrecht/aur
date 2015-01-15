@@ -8,13 +8,13 @@
 pkgname=gcc48
 _pkgver_minor=4.8
 pkgver=${_pkgver_minor}.3
-pkgrel=2
+pkgrel=3
 pkgdesc="The GNU Compiler Collection - C and C++ frontends (4.8.x)"
 arch=('i686' 'x86_64')
 license=('GPL' 'LGPL' 'FDL' 'custom')
 url="http://gcc.gnu.org"
 depends=('binutils>=2.24' 'libmpc' 'cloog')
-makedepends=('binutils>=2.24' 'libmpc' 'cloog' 'gcc-ada' 'doxygen')
+makedepends=('binutils>=2.24' 'libmpc' 'cloog' 'doxygen')
 checkdepends=('dejagnu' 'inetutils')
 options=('!emptydirs' 'staticlibs' '!libtool')
 source=(ftp://gcc.gnu.org/pub/gcc/releases/gcc-${pkgver}/gcc-${pkgver}.tar.bz2
