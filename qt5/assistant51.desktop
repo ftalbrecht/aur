@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Qt Assistant
+Name=Qt Assistant (5.1.1-6)
 Comment=Shows Qt documentation and examples
-Exec=/usr/lib/qt/bin/assistant
+Exec=/opt/qt51/usr/lib/qt/bin/assistant
 Icon=assistant
 Terminal=false
 Type=Application
