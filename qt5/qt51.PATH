@@ -1,0 +1,5 @@
+export PATH=/opt/qt51/usr/bin:$PATH
+export LD_LIBRARY_PATH=/opt/qt51/usr/lib:/opt/qt51/usr/lib64:$LD_LIBRARY_PATH
+export PYTHONPATH=/opt/qt51/usr/lib64/python2.7/site-packages/:/opt/qt51/usr/lib/python2.7/site-packages/:$PYTHONPATH
+export PKG_CONFIG_PATH=/opt/qt51/usr/lib64/pkgconfig:/opt/qt51/usr/lib/pkgconfig:/opt/qt51/usr/share/pkgconfig:/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
+
