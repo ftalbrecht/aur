@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=/usr/bin/qtcreator
-Name=Qt Creator
+Exec=/opt/qtcreator28/usr/bin/qtcreator
+Name=Qt Creator (2.8)
 GenericName=C++ IDE
 X-KDE-StartupNotify=true
 Icon=/usr/share/icons/hicolor/512x512/apps/QtProject-qtcreator.png
