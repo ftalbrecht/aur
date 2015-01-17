@@ -2,8 +2,8 @@
 Name=Qt QDbusViewer (5.1.1)
 GenericName=D-Bus Debugger
 Comment=Debug D-Bus applications
-Exec=/opt/qt51/usr/lib/qt/bin/qdbusviewer
-Icon=qdbusviewer
+Exec=/opt/qt51/bin/qdbusviewer
+Icon=qdbusviewer-qt51
 Terminal=false
 Type=Application
 Categories=Qt;Development;Debugger;

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Qt Linguist (5.1.1)
 Comment=Add translations to Qt applications
-Exec=/opt/qt5/usr/lib/qt/bin/linguist
-Icon=linguist
+Exec=/opt/qt5/linguist
+Icon=linguist-qt51
 MimeType=text/vnd.trolltech.linguist;application/x-linguist;
 Terminal=false
 Type=Application
