@@ -51,7 +51,7 @@ md5sums=('697b7b8768ef8895e168366ab6b44760'
          '6b162cd2bc104f0ae83ca039401be7bf'
          'e59ba552e12408dcc9486cdbb1f233e3'
          '478647fa057d190a7d789cf78995167b'
-         'a4b2213d07c51c4d5fcf77d001c13ab8')
+         '223bf04d844772cb8bd9b5b7fd0eeedf')
 
 prepare() {
   cd ${_pkgfqn}
@@ -85,14 +85,7 @@ build() {
   export QT_PLUGIN_PATH="${QTDIR}"/qtbase/plugins
 
   PYTHON=/usr/bin/python2 ./configure -confirm-license -opensource \
-    -prefix /usr \
-    -bindir /usr/lib/qt/bin \
-    -docdir /usr/share/doc/qt \
-    -headerdir /usr/include/qt \
-    -archdatadir /usr/lib/qt \
-    -datadir /usr/share/qt \
-    -sysconfdir /etc/xdg \
-    -examplesdir /usr/share/doc/qt/examples \
+    -prefix /opt/$pkgbase \
     -plugin-sql-{psql,mysql,sqlite,odbc,ibase} \
     -system-sqlite \
     -openssl-linked \
