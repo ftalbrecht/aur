@@ -96,11 +96,16 @@ build() {
   make
 
   # Fix paths
-  find "${QTDIR}" -name Makefile -exec sed -i "s|"${pkgdir}"/opt/$pkgbase/binqdoc|${QTDIR}/qtbase/bin/qdoc|g" {} +
-  find "${QTDIR}" -name Makefile.qmake-docs -exec sed -i "s|"${pkgdir}"/opt/$pkgbase/binqdoc|${QTDIR}/qtbase/bin/qdoc|g" {} +
-  find "${QTDIR}" -name Makefile -exec sed -i "s|"${pkgdir}"/opt/$pkgbase/binqhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" {} +
-  find "${QTDIR}" -name Makefile.qmake-docs -exec sed -i "s|"${pkgdir}"/opt/$pkgbase/binqhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" {} +
-  sed -i "s|"${pkgdir}"/opt/$pkgbase/binqhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" qtwebkit/Source/Makefile.api
+  find "${QTDIR}" -name Makefile -exec sed -i "s|${pkgdir}/opt/$pkgbase/bin/qdoc|${QTDIR}/qtbase/bin/qdoc|g" {} +
+  find "${QTDIR}" -name Makefile.qmake-docs -exec sed -i "s|${pkgdir}/opt/$pkgbase/bin/qdoc|${QTDIR}/qtbase/bin/qdoc|g" {} +
+  find "${QTDIR}" -name Makefile -exec sed -i "s|${pkgdir}/opt/$pkgbase/bin/qhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" {} +
+  find "${QTDIR}" -name Makefile.qmake-docs -exec sed -i "s|${pkgdir}/opt/$pkgbase/bin/qhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" {} +
+  find "${QTDIR}" -name Makefile -exec sed -i "s|/opt/$pkgbase/bin/qdoc|${QTDIR}/qtbase/bin/qdoc|g" {} +
+  find "${QTDIR}" -name Makefile.qmake-docs -exec sed -i "s|/opt/$pkgbase/bin/qdoc|${QTDIR}/qtbase/bin/qdoc|g" {} +
+  find "${QTDIR}" -name Makefile -exec sed -i "s|/opt/$pkgbase/bin/qhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" {} +
+  find "${QTDIR}" -name Makefile.qmake-docs -exec sed -i "s|/opt/$pkgbase/bin/qhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" {} +
+  sed -i "s|${pkgdir}/opt/$pkgbase/bin/qhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" qtwebkit/Source/Makefile.api
+  sed -i "s|/opt/$pkgbase/bin/qhelpgenerator|${QTDIR}/qttools/bin/qhelpgenerator|g" qtwebkit/Source/Makefile.api
 
   make docs
 }
