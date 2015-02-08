@@ -143,7 +143,7 @@ package_qt51-base() {
   done
 
   # install PATH file
-  install -m644 "${srcdir}"/$pkgbase.PATH "${pkgdir}/"
+  install -m644 "${srcdir}/$pkgbase.PATH" "${pkgdir}/opt/$pkgbase.PATH"
 }
 
 package_qt51-declarative() {
